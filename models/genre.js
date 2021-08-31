@@ -25,4 +25,4 @@ Genre.init(
   }
 );
 
-module.exports = User;
+module.exports = Genre;
