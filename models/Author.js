@@ -16,11 +16,6 @@ Author.init(
     author_name: {
       type: DataTypes.STRING,
       allowNull: false,
-      references: {
-        model: 'book',
-        key: 'id',
-        unique: true,
-      },
     },
   },
   {

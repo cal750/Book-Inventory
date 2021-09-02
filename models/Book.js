@@ -1,31 +1,32 @@
-const { Model, Datatypes } = require('sequalize');
+const { Model, DataTypes } = require('sequelize');
+
 const sequelize = require('../config/connection');
 
 //Create new sequelize model for books
 class Book extends Model {}
 
 Book.init(
-{
+    {
     //defines the primary key
     id: {
-        type: Datatypes.INTEGER,
+        type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
         allowNull: false
     },
     book_name: {
-        type: Datatypes.STRING(128),
+        type: DataTypes.STRING(128),
         allowNull: false
     },
     author_id: {
-        type: Datatypes.STRING(30),
+        type: DataTypes.INTEGER,
         references: {
             model: 'author',
             key: 'id',
         },
     },
     genre_id: {
-        type: Datatypes.INTEGER,
+        type: DataTypes.INTEGER,
         references: {
             model: 'genre',
             key: 'id'

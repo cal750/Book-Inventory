@@ -1,0 +1,87 @@
+[
+    {
+        "book_name": "Dune",
+        "author_id": 1,
+        "genre_id": 2
+    },
+    {
+        "book_name": "The Player of Games",
+        "author_id": 2,
+        "genre_id": 2
+    },
+    {
+        "book_name": "Use of Weapons",
+        "author_id": 2,
+        "genre_id": 2
+    },
+    {
+        "book_name": "A Game of Thrones",
+        "author_id": 3,
+        "genre_id": 1
+    },
+    {
+        "book_name": "A Clash of Kings",
+        "author_id": 3,
+        "genre_id": 1
+    },
+    {
+        "book_name": "A Storm of Swords",
+        "author_id": 3,
+        "genre_id": 1
+    },
+    {
+        "book_name": "A Feast for Crows",
+        "author_id": 3,
+        "genre_id": 1
+    },
+    {
+        "book_name": "A Dance with Dragons",
+        "author_id": 3,
+        "genre_id": 1
+    },
+    {
+        "book_name": "Carrie",
+        "author_id": 4,
+        "genre_id": 7
+    },
+    {
+        "book_name": "The Shining",
+        "author_id": 4,
+        "genre_id": 7
+    },
+    {
+        "book_name": "The Time Traveler's Wife",
+        "author_id": 5,
+        "genre_id": 5
+    },
+    {
+        "book_name": "Murder on the Orient Express",
+        "author_id": 6,
+        "genre_id": 6
+    },
+    {
+        "book_name": "A Promised Land",
+        "author_id": 7,
+        "genre_id": 12 
+    },
+    {
+        "book_name": "The Margaret Fulton Cookbook",
+        "author_id": 8,
+        "genre_id": 14
+    },
+    {
+        "book_name": "Genghis Khan and the Making of the Modern World",
+        "author_id": 9,
+        "genre_id": 19
+    },
+    {
+        "book_name": "Neither Here nor There: Travels in Europe",
+        "author_id": 10,
+        "genre_id": 28
+    },
+    {
+        "book_name": "In Cold Blood",
+        "author_id": 11,
+        "genre_id": 29
+    }
+]
