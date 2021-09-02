@@ -4,37 +4,41 @@ const Genre = require('./Genre');
 const Author = require('./Author');
 const Review = require('./Review');
 
-Book.belongsTo(Author,{
-    foreignKey:'book_id',
-});
-
 Book.hasMany(Review,{
-    foreignKey:'review_id'
-});
-
-Book.hasOne(Genre,{
-    foreignKey: 'genre_id',
-});
-
-Author.hasMany(Book, {
-    foreignKey: 'book_id',
-});
-
-Review.hasOne(User,{
-    foreignKey: 'user_id',
+    foreignKey:'book_id'
 });
 
 Review.belongsTo(Book,{
     foreignKey: 'book_id',
 });
 
-User.hasMany(Review,{
-    foreignKey: 'review_id',
-});
 
 Genre.hasMany(Book, {
-    foreignKey: 'book_id',
+    foreignKey: 'genre_id',
 });
+
+Book.belongsTo(Genre,{
+    foreignKey: 'genre_id',
+});
+
+
+Author.hasMany(Book, {
+    foreignKey: 'author_id',
+});
+
+Book.belongsTo(Author, {
+    foreignKey: 'author_id'
+});
+
+
+User.hasMany(Review,{
+    foreignKey: 'user_id',
+});
+
+Review.belongsTo(User,{
+    foreignKey: 'user_id',
+});
+
 
 module.exports = { User, Book, Genre, Author, Review };
 
