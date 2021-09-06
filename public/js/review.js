@@ -2,9 +2,8 @@ const newFormHandler = async (event) => {
     event.preventDefault();
 
     const content = document.querySelector('#content').value.trim();
-//    const user_id = ;
-//    const book_id = ;
-//    const book_title = ;
+    const user_id = document.querySelector('#user_id').value.trim();
+    const book_title = document.querySelector('#book_id').value.trim();;
 
     if ( content ) {
         const response = await fetch(`/api/book`, {

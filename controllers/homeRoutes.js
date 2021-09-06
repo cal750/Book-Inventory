@@ -2,15 +2,37 @@ const router = require('express').Router();
 const { Book, Author, Genre, Review, User } = require('../models');
 const withAuth = require('../middleware/auth-middleware');
 
-router.get('/', function(req, res){
+router.get('/', async (req, res) => {
+  // try {
+  //   // Get all projects and JOIN with user data
+  //   const projectData = await Project.findAll({
+  //     include: [
+  //       {
+  //         model: User,
+  //         attributes: ['name'],
+  //       },
+  //     ],
+  //   });
+
+  //   // Serialize data so the template can read it
+  //   const projects = projectData.map((project) => project.get({ plain: true }));
+
+  //   // Pass serialized data and session flag into template
+  //   res.render('home', { 
+  //     projects, 
+  //     logged_in: req.session.logged_in 
+  //   });
+  // } catch (err) {
+  //   res.status(500).json(err);
+  // }
 
   res.render('home');
 });
 
 // router.get('/', async (req, res) => {
 //   try {
-//     // Get all projects and JOIN with user data
-//     const projectData = await Project.findAll({
+//     // Get all books and JOIN with user data
+//     const bookData = await book.findAll({
 //       include: [
 //         {
 //           model: User,
@@ -20,11 +42,11 @@ router.get('/', function(req, res){
 //     });
 
 //     // Serialize data so the template can read it
-//     const projects = projectData.map((project) => project.get({ plain: true }));
+//     const books = bookData.map((book) => book.get({ plain: true }));
 
 //     // Pass serialized data and session flag into template
 //     res.render('homepage', { 
-//       projects, 
+//       books, 
 //       logged_in: req.session.logged_in 
 //     });
 //   } catch (err) {
@@ -32,21 +54,21 @@ router.get('/', function(req, res){
 //   }
 // });
 
-router.get('/project/:id', async (req, res) => {
+router.get('/book/:id', async (req, res) => {
   try {
-    const projectData = await Project.findByPk(req.params.id, {
+    const bookData = await Book.findByPk(req.params.id, {
       include: [
         {
-          model: User,
-          attributes: ['name'],
+          model: Author,
+          attributes: ['author_name'],
         },
       ],
     });
 
-    const project = projectData.get({ plain: true });
+    const book = bookData.get({ plain: true });
 
-    res.render('project', {
-      ...project,
+    res.render('book', {
+      ...book,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -60,7 +82,7 @@ router.get('/profile', withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Project }],
+      include: [{ model: book }],
     });
 
     const user = userData.get({ plain: true });
@@ -84,10 +106,37 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+
 // register
 router.get('/register', function(req, res){
 
   res.render('register');
+
+
+router.get('/search', async (req, res) => {
+  // Get all books
+  try {
+    const bookData = await Book.findAll({
+      include: [
+        {
+          model: Author,
+          attributes: ['author_name'],
+        },
+      ],
+    });
+
+    // Serialize data so the template can read it
+    const books = bookData.map((book) => book.get({ plain: true }));
+
+    // Pass serialized data and session flag into template
+    res.render('search', { 
+      books, 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+
 });
 
 module.exports = router;
