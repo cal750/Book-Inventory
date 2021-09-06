@@ -4,12 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <title>Document</title>
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <h1><i class="fas fa-books"></i> Book Inventory</h1>
+        <nav class="navbar navbar-expand-sm navbar-light">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav m-auto">
+                <a class="nav-item nav-link" href="/">Home</a>
+                <a class="nav-item nav-link" href="/search">Search Books</a>
+
+                {{#if loggedIn}}
+                    <a class="nav-item nav-link" href="/inventory">Inventory</a>
+                    <a id="logout" class="nav-item nav-link" href="/logout">Logout</a>
+                {{else}}
+                    <a class="nav-item nav-link" href="/login">Login</a>
+                {{/if}}
+              </div>
+            </div>
+          </nav>    
+    </header>
+
+    <!-- Hero -->
+    <div class="hero">
+        <img src="https://www.pngitem.com/pimgs/m/480-4808505_transparent-bookshelf-with-books-clipart-books-on-shelf.png" class="img-fluid max-width: 100% height: auto" alt="Row of books leaning on laptop">
+    </div>
     
     {{{ body }}}
+
+    <footer>
+        <div class="row-is-full content has-text-centered text-decoration-none">
+            <p class="text-decoration-none">
+                <strong><i class="fas fa-books"></i> Book Inventory</strong> by <a class="text-decoration-none" href="https://github.com/scottyv6">Scott Vidler</a> - <a class="text-decoration-none" href="https://github.com/cal750">Seth Nightingale</a> - <a class="text-decoration-none" href="https://github.com/BlakeGeo">Blake Georgeff</a> - <a class="text-decoration-none" href="https://github.com/MeghaWhat">Megha Rahman</a> | source code:
+                <a class="text-decoration-none" href="https://github.com/cal750/Project-2"><i class="fab fa-github"></i></a> 
+            </p>
+        </div>
+    </footer>
 
 </body>
 </html>

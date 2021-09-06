@@ -1,13 +1,28 @@
-<div class="row">
-    <div class="col-md-6">
-        <div class="input-group">
-            <div class="form-outline">
-                <input type="search" id="form1" class="form-control" />
-                <label class="form-label" for="form1">Search</label>
-            </div>
-            <button type="button" class="btn btn-primary">
-                <i class="fas fa-search"></i>
-            </button>
-        </div>
+<div class="container">
+    <h1>📖 Book Inventory 📖</h1>
+    <div class='input-group' id="searchWrapper">
+        <input
+            type="text"
+            name="searchBar"
+            id="searchBar"
+            placeholder="search for a book or author"
+        />
     </div>
+    <ul id="bookList">
+        {{#each books as |book| }}
+        <div class="row mb-4">
+          <div class="col-md-4">
+            <h2 id="bookName">
+              <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+            {{{get_bookmoji}}}
+            <a href="/book/{{book.id}}"</a>{{book.book_name}}</a>
+            </h2>
+            <p id="authorName">{{author.author_name}}</p>
+          </div>
+        </div>
+        {{/each}}
+    </ul>
 </div>
+
+<script src="../public/js/search.js"></script>
+
