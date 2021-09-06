@@ -112,6 +112,8 @@ router.get('/register', function(req, res){
 
   res.render('register');
 
+});
+
 
 router.get('/search', async (req, res) => {
   // Get all books
