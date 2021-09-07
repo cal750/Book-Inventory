@@ -19,7 +19,7 @@
                 <a class="nav-item nav-link" href="/">Home</a>
                 <a class="nav-item nav-link" href="/search">Search Books</a>
 
-                {{#if loggedIn}}
+                {{#if session.logged_in}}
                     <a class="nav-item nav-link" href="/inventory">Inventory</a>
                     <a id="logout" class="nav-item nav-link" href="/logout">Logout</a>
                 {{else}}
