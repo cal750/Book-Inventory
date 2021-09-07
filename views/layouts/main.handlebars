@@ -22,7 +22,8 @@
 
                 {{#if session.logged_in}}
                     <a class="nav-item nav-link" href="/inventory">Inventory</a>
-                    <a id="logout" class="nav-item nav-link" href="/logout">Logout</a>
+                    {{!-- <a id="logout" class="nav-item nav-link" href="/logout">Logout</a> --}}
+                    <button class="no-button" id="logout">Logout</button>
                 {{else}}
                     <a class="nav-item nav-link" href="/login">Login</a>
                 {{/if}}
@@ -46,6 +47,8 @@
             </p>
         </div>
     </footer>
+
+    <script src="./js/logout.js"></script>
 
 </body>
 </html>
