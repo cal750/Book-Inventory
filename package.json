@@ -4,16 +4,22 @@
   "description": "The second project that is being collaborated between Seth, Scott, Megha and Blake",
   "main": "index.js",
   "dependencies": {
-    "bcrypt": "^5.0.1",    
+    "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.1",
+    "controllers": "0.0.2",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.3",
     "express-session": "^1.17.2",
     "mysql2": "^2.3.0",
+    "path": "^0.12.7",
     "sequelize": "^6.6.5"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^10.3.4",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.11"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",

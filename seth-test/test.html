@@ -11,7 +11,6 @@
     <title>Document</title>
 </head>
 <body>
-Adding-in-cs-framework
   <nav class="navbar navbar-light bg-light justify-content-between">
     <a class="navbar-brand">BookRepo</a>
     <nav class="navbar navbar-light bg-light">
@@ -23,36 +22,36 @@ Adding-in-cs-framework
       {{/if}}
       </nav>
     </nav>
-
-    <!-- Header -->
-    <header>
-        <h1><i class="fas fa-books"></i> Book Inventory</h1>
-        <nav class="navbar navbar-expand-sm navbar-light">
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav m-auto">
-                <a class="nav-item nav-link" href="/">Home</a>
-                <a class="nav-item nav-link" href="/search">Search Books</a>
-
-                {{#if session.logged_in}}
-                    <a class="nav-item nav-link" href="/inventory">Inventory</a>
-                    {{!-- <a id="logout" class="nav-item nav-link" href="/logout">Logout</a> --}}
-                    <button class="no-button" id="logout">Logout</button>
-                {{else}}
-                    <a class="nav-item nav-link" href="/login">Login</a>
-                {{/if}}
-              </div>
-            </div>
-          </nav>    
-    </header>
-main
     <!-- Hero -->
     <div class="hero">
         <img src="https://www.pngitem.com/pimgs/m/480-4808505_transparent-bookshelf-with-books-clipart-books-on-shelf.png" class="img-fluid max-width: 100% height: auto" alt="Row of books leaning on laptop">
     </div>
     
-    {{{ body }}}
+    <h2>Signup</h2>
 
-Adding-in-cs-framework
+    <form class="form signup-form">
+      <div class="form-group">
+        <label for="name-signup">name:</label>
+        <input class="form-input" type="text" id="name-signup" />
+      </div>
+      <div class="form-group">
+        <label for="email-signup">email:</label>
+        <input class="form-input" type="text" id="email-signup" />
+      </div>
+      <div class="form-group">
+        <label for="password-signup">password:</label>
+        <input class="form-input" type="password" id="password-signup" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">signup</button>
+      </div>
+      <div>
+        <a href="/login">Login Instead</a>  
+      </div>
+    </form>
+
+<script src="./js/register.js"></script>
+
     <footer class = "justify-content-between bg-light">
       <div class= "row-is-full content has-text-centered text-decoration-none">
           <p class="text-decoration-none">
@@ -61,18 +60,9 @@ Adding-in-cs-framework
           </p>
       </div>
   </footer>
-=======
-    <footer>
-        <div class="row-is-full content has-text-centered text-decoration-none">
-            <p class="text-decoration-none">
-                <strong><i class="fas fa-books"></i> Book Inventory</strong> by <a class="text-decoration-none" href="https://github.com/scottyv6">Scott Vidler</a> - <a class="text-decoration-none" href="https://github.com/cal750">Seth Nightingale</a> - <a class="text-decoration-none" href="https://github.com/BlakeGeo">Blake Georgeff</a> - <a class="text-decoration-none" href="https://github.com/MeghaWhat">Megha Rahman</a> | source code:
-                <a class="text-decoration-none" href="https://github.com/cal750/Project-2"><i class="fab fa-github"></i></a> 
-            </p>
-        </div>
-    </footer>
-
-    <script src="./js/logout.js"></script>
-
-main
 </body>
 </html>
+
+
+
+
