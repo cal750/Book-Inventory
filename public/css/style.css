@@ -1,0 +1,89 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(195, 201, 226);
+    width: 97%;
+}
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    text-align: center;
+    font-size: larger;
+    padding-top: 20px;
+}
+
+.hero {
+    width: 100%;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
+.container {
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.book {
+    background-color: burlywood;
+    border-radius: 5px;
+    padding: 10px 20px;
+   
+    text-align: center;
+} 
+
+.book > h2 {
+    text-decoration: none;
+    color: black;
+}
+
+.book > p {
+    font-weight: 600;
+}
+
+#bookList {
+    padding-inline-start: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 20px;    
+}
+
+
+.listCover {
+    max-height: 400px;
+    max-width: 300px;
+}
+
+.singleCover {
+    max-height: 700px;
+    max-width: 500px;
+}
+
+#searchBar {
+    width: 100%;
+    height: 32px;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+#searchWrapper {
+    position: relative;
+}
+
+.input-group {
+    padding: 15px;
+}

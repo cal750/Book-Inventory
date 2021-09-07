@@ -12,13 +12,5 @@ module.exports = {
   
       return `<span for="img" aria-label="book">${book}</span>`;
     },
-    // returns plural language if more than 1 star on book
-    format_plural: (word, amount) => {
-        if (amount !== 1) {
-          return `${word}s`;
-        }
-    
-        return word;
-    },
-  };
+};
   

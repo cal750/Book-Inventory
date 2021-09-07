@@ -1,28 +1,48 @@
 <div class="container">
-    <h1>📖 Book Inventory 📖</h1>
+    <h1>📖 Browse Books 📖</h1>
     <div class='input-group' id="searchWrapper">
         <input
             type="text"
             name="searchBar"
             id="searchBar"
-            placeholder="search for a book or author"
+            placeholder="start typing to search"
         />
     </div>
-    <ul id="bookList">
-        {{#each books as |book| }}
-        <div class="row mb-4">
-          <div class="col-md-4">
-            <h2 id="bookName">
-              <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-            {{{get_bookmoji}}}
-            <a href="/book/{{book.id}}"</a>{{book.book_name}}</a>
-            </h2>
-            <p id="authorName">{{author.author_name}}</p>
-          </div>
-        </div>
-        {{/each}}
-    </ul>
+    <ul id="bookList"></ul>
 </div>
 
-<script src="../public/js/search.js"></script>
+<script>
+const bookList = document.getElementById('bookList');
+const searchBar = document.getElementById('searchBar');
+let books = {{{bookString}}};
+
+searchBar.addEventListener('keyup', (e) => {
+    const searchString = e.target.value.toLowerCase();
+
+    const filteredBooks = books.filter((book) => {
+        return (
+            book.book_name.toLowerCase().includes(searchString) ||
+            book.author.author_name.toLowerCase().includes(searchString)
+        );
+    });
+    console.log(searchString);
+    console.log(filteredBooks);
+    displayBooks(filteredBooks);
+});
+
+const displayBooks = (book) => {
+  const htmlString = book.map((book) => {
+            return `
+            <div class="book">
+                <h2 class='fas fa-book'><a href="/book/${book.id}"> ${book.book_name}</h2></a>
+                <p>Author: ${book.author.author_name}</p>
+                <img class='listCover' src='${book.cover_url}'></img>
+            </div>
+        `;
+        })
+        .join('');
+    bookList.innerHTML = htmlString;
+
+}
+</script>
 

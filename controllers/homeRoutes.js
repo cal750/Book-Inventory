@@ -121,10 +121,10 @@ router.get('/search', async (req, res) => {
 
     // Serialize data so the template can read it
     const books = bookData.map((book) => book.get({ plain: true }));
-
+    const bookString = JSON.stringify(books);
     // Pass serialized data and session flag into template
     res.render('search', { 
-      books, 
+      books, bookString, 
       logged_in: req.session.logged_in 
     });
   } catch (err) {
