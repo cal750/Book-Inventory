@@ -62,6 +62,14 @@ router.get('/book/:id', async (req, res) => {
           model: Author,
           attributes: ['author_name'],
         },
+        {
+          model: Review,
+          attributes: ['text'],
+          include: {
+            model: User,
+            attributes: ['name'],
+          }
+        },
       ],
     });
 
@@ -115,7 +123,7 @@ router.get('/register', function(req, res){
 });
 
 
-router.get('/search', async (req, res) => {
+router.get('/inventory', async (req, res) => {
   // Get all books
   try {
     const bookData = await Book.findAll({
@@ -131,7 +139,7 @@ router.get('/search', async (req, res) => {
     const books = bookData.map((book) => book.get({ plain: true }));
     const bookString = JSON.stringify(books);
     // Pass serialized data and session flag into template
-    res.render('search', { 
+    res.render('inventory', { 
       books, bookString, 
       logged_in: req.session.logged_in 
     });

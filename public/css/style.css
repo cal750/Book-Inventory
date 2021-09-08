@@ -67,8 +67,12 @@ footer {
 }
 
 .singleCover {
-    max-height: 700px;
-    max-width: 500px;
+    max-height: 600px;
+    max-width: 450px;
+}
+
+.btn {
+    width: 50%;
 }
 
 #searchBar {

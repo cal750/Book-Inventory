@@ -8,16 +8,15 @@ router.get('/review/:id', withAuth, async (req, res) => {
             include: [
                 {
                     model: Book,
-                    attribute: ['id'],
+                    attribute: ['name'],
                 },
             ],
         });
 
         const review = reviewData.map((review) => review.get({ plain: true }));
-        const reviewString = JSON.stringify(books);
 
         res.render('review', {
-            review, reviewString,
+            review,
             logged_in: req.session.logged_in
         });
     } catch (err) {

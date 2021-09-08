@@ -1,11 +1,11 @@
 
 <div class="container">
-  {{#if review.lenght}}
+  {{#if review.length}}
   <h3>📖 Browse Reviews 📖</h1>
 
   <div>
     <h1>{{book.name}}</h1>
-    {{#each review as |review|}}
+    {{#each reviews as |review|}}
     <p>{{review.text}}</p>
     <p> Opinion of {{review.user_name}}</p> 
     {{/each}}
