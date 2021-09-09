@@ -1,7 +1,9 @@
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: rgb(195, 201, 226);
-    width: 97%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 * {
@@ -18,15 +20,32 @@ header {
     text-align: center;
     font-size: larger;
     padding-top: 20px;
+    border-bottom:rgb(0, 0, 0);
+    border-style: solid;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    display: flex;
+    background-color: royalblue;
 }
 
 .hero {
     width: 100%;
     text-align: center;
+    flex: flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-footer {
+.footer {
     text-align: center;
+    border: black;
+    border-style: solid;
+    width: 100%;
+    display: flex;
+    flex-wrap: flex;
+    flex-direction: row;
 }
 
 .container {
@@ -34,6 +53,11 @@ footer {
     margin: 0 auto;
     max-width: 1000px;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .book {
@@ -60,6 +84,15 @@ footer {
     grid-gap: 20px;    
 }
 
+.display{
+    padding: 10px;
+    flex: auto;
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
 
 .listCover {
     max-height: 400px;

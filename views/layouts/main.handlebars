@@ -20,7 +20,7 @@
             <div class="collapse navbar-collapse">
               <div class="navbar-nav m-auto">
                 <a class="nav-item nav-link" href="/">Home</a>
-
+            <div>
                 {{#if session.logged_in}}
                     <a class="nav-item nav-link" href="/inventory">Inventory</a>
                     <a class="nav-item nav-link" id="logout">Logout</a>
@@ -31,16 +31,19 @@
             </div>
           </nav>    
     </header>
+<div>
     <!-- Hero -->
     <div class="hero">
         <img src="https://www.pngitem.com/pimgs/m/480-4808505_transparent-bookshelf-with-books-clipart-books-on-shelf.png" class="img-fluid max-width: 100% height: auto" alt="Row of books leaning on laptop">
     </div>
     
+    <div class = "display">
     {{{ body }}}
+    </div>
 
     <footer>
-        <div class="row-is-full content has-text-centered text-decoration-none">
-            <p class="text-decoration-none">
+        <div>
+            <p class=" footer text-decoration-none">
                 <strong><i class="fas fa-books"></i> Book Inventory</strong> by <a class="text-decoration-none" href="https://github.com/scottyv6">Scott Vidler</a> - <a class="text-decoration-none" href="https://github.com/cal750">Seth Nightingale</a> - <a class="text-decoration-none" href="https://github.com/BlakeGeo">Blake Georgeff</a> - <a class="text-decoration-none" href="https://github.com/MeghaWhat">Megha Rahman</a> | source code:
                 <a class="text-decoration-none" href="https://github.com/cal750/Project-2"><i class="fab fa-github"></i></a> 
             </p>
@@ -48,6 +51,6 @@
     </footer>
 
     <script src="./js/logout.js"></script>
-
+</div>
 </body>
 </html>
