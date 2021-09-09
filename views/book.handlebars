@@ -1,6 +1,21 @@
-<div class="card">
-    <h2 class="text-centre">{{book_name}}</h2>
-    <h5 class="text-centre">{{author.author_name}}</h5>
+<div class="book">
+    <h2 class="fas fa-book">{{book_name}}</h2>
+    <h5 class="">{{author.author_name}}</h5>
     <img class='singleCover' src="{{cover_url}}" alt="{{book_name}}">
-    <button class='btn btn-primary'>Add a review</button>
+</div>
+<div>
+    {{!-- {{#if review.text.length}} --}}
+        <h3>📖 Browse Reviews 📖</h1>
+
+        <div>
+            {{#each reviews as |review|}}
+            <p>{{review.text}}</p>
+            <p> Opinion of {{user.name}}</p> 
+            {{/each}}
+        </div>
+  {{!-- {{/if}} --}}
+
+  <div>
+    <button id="addReviewPage" href=''>Add your review</button>
+  </div>
 </div>
