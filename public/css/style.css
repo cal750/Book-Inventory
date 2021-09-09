@@ -1,14 +1,13 @@
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: rgb(195, 201, 226);
-    width: 97%;
+    width: 100%;
 }
 
 * {
     box-sizing: border-box;
     text-decoration: none;
 }
-
 a {
     text-decoration: none;
     color: black;
@@ -18,6 +17,7 @@ header {
     text-align: center;
     font-size: larger;
     padding-top: 20px;
+    background-color: steelblue;
 }
 
 .hero {
