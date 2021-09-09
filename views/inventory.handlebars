@@ -8,7 +8,51 @@
             placeholder="start typing to search"
         />
     </div>
-    <ul id="bookList"></ul>
+    <ul class="container animate__animated animate__fadeInUp" id="bookList"></ul>
+
+    <div class="d-flex justify-content-around align-items-center p-3">
+        <p>Can't find what you're looking for?<br>Add a book to the inventory!</p>
+        <!-- Button to trigger modal -->
+        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#bookModal">Add Book</button>                
+        <!-- Modal -->
+        <div class="modal fade" id="bookModal" tabindex="-1" role="dialog" aria-labelledby="bookModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add a Book</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <!-- Form goes here -->
+                        <form class="new-book">
+                            <div>
+                                <label for="book-title">What is the book's title?</label>
+                                <input type="text" name="book-title" id="book-title">
+                            </div>
+                            <div>
+                                <label for="author">Who is the Author?</label>
+                                <input type="" name="author" id="author">
+                            </div>
+                            <div>
+                                <label for="cover-url">Add in a cover URL</label>
+                                <input type="text" id="cover-url">
+                            </div>
+                            <div>
+                                <label for="review">Add in your review of the book</label>
+                                <input type="text" id="review">
+                            </div>    
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                <button type="button submit" class="btn btn-secondary" id="submit">Save book</button>
+                            </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>
@@ -25,8 +69,6 @@ searchBar.addEventListener('keyup', (e) => {
             book.author.author_name.toLowerCase().includes(searchString)
         );
     });
-    console.log(searchString);
-    console.log(filteredBooks);
     displayBooks(filteredBooks);
 });
 
@@ -44,5 +86,5 @@ const displayBooks = (book) => {
     bookList.innerHTML = htmlString;
 
 }
-</script>
 
+</script>
