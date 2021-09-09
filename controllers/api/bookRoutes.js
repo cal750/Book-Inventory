@@ -26,10 +26,11 @@ router.get('/review/:id', withAuth, async (req, res) => {
 
 router.post('/book', withAuth, async  (req, res) => {
    try {
-
-    const author = await Author.create ({
-        author_name: req.body.author_name,
-    })
+    // Find existing author or create a new one if they do not exist
+    const [author, created] = await Author.findOrCreate({
+        where: {author_name: req.body.author_name}
+    });
+    console.log('New Author: ', created);
 
     const bookData = await Book.create({
         book_name: req.body.book_name,
