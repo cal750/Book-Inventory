@@ -1,18 +1,18 @@
 const addReview = async (event) => {
     event.preventDefault();
   
-    const reviewText = document.getElementById("review-text").value.trim();
+    const text = document.getElementById("review-text").value.trim();
   
     const book_id = window.location.toString().split('/')[
       window.location.toString().split('/').length - 1
     ];
   
-    if (reviewText) {
+    if (text) {
         const response = await fetch('/api/review', {
           method: 'POST',
           body: JSON.stringify({
-            book_id,
-            reviewText
+            text,
+            book_id
           }),
           headers: {
             'Content-Type': 'application/json'

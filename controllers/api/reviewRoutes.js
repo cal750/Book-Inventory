@@ -11,18 +11,16 @@ router.get('/', (req, res) => {
       });
 });
 
-router.post('/', withAuth, (req, res) => {
-    if (req.session) {
-      Review.create({
-        reviewText: req.body.text,
-        book_id: req.body.book_id,
+  router.post('/', withAuth, async (req, res) => {
+    try {
+      const newReview = await Review.create({
+        ...req.body,
         user_id: req.session.user_id,
-      })
-        .then(reviewData => res.json(reviewData))
-        .catch(err => {
-          console.log(err);
-          res.status(400).json(err);
-        });
+      });
+  
+      res.status(200).json(newReview);
+    } catch (err) {
+      res.status(400).json(err);
     }
   });
 
