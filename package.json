@@ -1,5 +1,5 @@
 {
-  "name": "Project-2",
+  "name": "Book-Inventory",
   "version": "1.0.0",
   "description": "The second project that is being collaborated between Seth, Scott, Megha and Blake",
   "main": "index.js",
@@ -17,7 +17,6 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.3.4",
-    "nodemon": "^2.0.12",
     "postcss": "^8.3.6",
     "tailwindcss": "^2.2.11"
   },
@@ -28,13 +27,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cal750/Project-2.git"
+    "url": "git+https://github.com/cal750/Book-Inventory.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cal750/Project-2/issues"
+    "url": "https://github.com/cal750/Book-Inventory/issues"
   },
-  "homepage": "https://github.com/cal750/Project-2#readme"
+  "homepage": "https://github.com/cal750/Book-Inventory#readme"
 }

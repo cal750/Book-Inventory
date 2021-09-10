@@ -21,6 +21,8 @@
   ## Usage
   After running it through the command line OR gaining access to the Heroku deployment, a user can access the websitea and add reviews / books as required. To run the application from the command line the user must input the following command:
   'node server.js'
+
+  To use the .excalidraw files in 'group-work' navigate to https://excalidraw.com/ and drag / drop the files onto the webpage
   
   ## License
   MIT [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
