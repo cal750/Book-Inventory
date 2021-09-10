@@ -1,27 +1,27 @@
-<div class="book">
+<div class="book mt-4">
     <h2 class="fas fa-book">{{book_name}}</h2>
     <h5 class="">{{author.author_name}}</h5>
     <img class='singleCover' src="{{cover_url}}" alt="{{book_name}}">
 </div>
-<div>
-        <h3 class="text-center">Reviews</h1>
+<div class="mt-2">
+        <h2 class="text-center p-2 font-weight-bold">Reviews</h2>
     {{!-- {{#if reviews.text.length}} --}}
-        <div>
+        <div class="reviews">
             {{#each reviews as |review|}}
-            <p class="text-left font-weight-bold">{{user.name}}</p> 
-            <p class="text-center">{{review.text}}</p>
+            <p class="text-center font-size-large">{{review.text}}</p>
+            <h3 class="text-left font-weight-bold">{{user.name}}</h3> 
             {{/each}}
         </div>
     {{!-- {{/if}} --}}
 
-<div class="row justify-content-center">
-    <div class="card col-md-6">
-      <form class="review-form">
-        <div class="m-3">
-          <textarea id="review-text" class="comment-body" name="comment-body"></textarea>
+<div class="row justify-content-center mb-3">
+    <div class="review-form card col-md-6">
+      <form class="">
+        <div class="">
+          <textarea id="review-text" class="comment-body" name="comment-body" placeholder="Add your review here"></textarea>
             </div>
-            <div class="row justify-content-center">
-          <button type="submit" id="addReview" class="btn btn-secondary">Add Review</button>
+            <div class="row justify-content-center review-area">
+          <button type="submit" id="addReview" class="btn btn-secondary mb-2">Add Review</button>
         </div>
       </form>
     </div>

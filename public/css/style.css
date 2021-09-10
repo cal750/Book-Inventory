@@ -1,12 +1,13 @@
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: rgb(195, 201, 226);
-    width: 100%;
 }
 
 * {
     box-sizing: border-box;
     text-decoration: none;
+    margin: 0;
+    padding: 0;
 }
 a {
     text-decoration: none;
@@ -18,6 +19,11 @@ header {
     font-size: larger;
     padding-top: 20px;
     background-color: steelblue;
+}
+
+body {
+    width: 95%;
+    margin: 1rem auto;
 }
 
 .hero {
@@ -92,6 +98,20 @@ footer {
     padding: 15px;
 }
 
+.reviews {
+    border-top: 3px solid burlywood;
+    margin: 1rem 0;
+}
+
+.reviews > h3 {
+    border-bottom: 3px solid burlywood;
+}
+
+.review-form {
+    background-color: rgb(195, 201, 226);
+    border: none;
+}
+
 .no-button {
     background: none;
     border: none;
@@ -105,3 +125,24 @@ footer {
   .no-button:hover {
     color: #222425;    
   }
+
+  input[type=text], input[type=password] {
+	width: 50%;
+	padding: 1rem;
+	border: 1px solid black;
+    border-radius: 5px;
+	box-sizing: border-box;
+	resize: vertical;
+	background-color: burlywood;
+}
+
+textarea {
+	width: 100%;
+	padding: 1rem;
+	border: 1px solid black;
+    border-radius: 5px;
+	box-sizing: border-box;
+	margin: 0.5rem 0 1rem 0;
+	resize: vertical;
+	background-color: burlywood;
+}
