@@ -49,9 +49,7 @@ router.get('/login', (req, res) => {
 
 // register
 router.get('/register', function(req, res){
-
   res.render('register');
-
 });
 
 router.get('/inventory', async (req, res) => {
@@ -65,7 +63,6 @@ router.get('/inventory', async (req, res) => {
         },
       ],
     });
-
     // Serialize data so the template can read it
     const books = bookData.map((book) => book.get({ plain: true }));
     const bookString = JSON.stringify(books);

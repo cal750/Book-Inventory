@@ -19,8 +19,6 @@ async function newBookHandler(event) {
           'Content-Type': 'application/json'
         },
       });
-      console.log(book_name);
-      console.log(author_name);
   
     if (response.ok) {
       document.location.replace('/inventory');
